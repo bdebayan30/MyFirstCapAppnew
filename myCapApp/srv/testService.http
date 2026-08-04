@@ -1,0 +1,148 @@
+###Get the Service Document
+http://localhost:4004/odata/v4/CatalogService/$metadata 
+
+###Get the Service Document with Mock User
+http://localhost:4004/odata/v4/CatalogService/$metadata 
+Authorization: Basic debayan:
+
+###Get Employee Data with Restriction - Mock User
+http://localhost:4004/odata/v4/CatalogService/EmployeeSet
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJqaWQiOiJUd2pGbTFsM1loSGMxUUVlUjF1bWhkUXZrM2Y2b0ZKZTk2Z3FhMjkvM0xJPSIsImFsZyI6IlJTMjU2Iiwiamt1IjoiaHR0cHM6Ly9mNDY0N2FlNnRyaWFsLmF1dGhlbnRpY2F0aW9uLnVzMTAuaGFuYS5vbmRlbWFuZC5jb20vdG9rZW5fa2V5cyIsImtpZCI6ImRlZmF1bHQtand0LWtleS03ODAzODUwMTQzIn0.eyJzdWIiOiIwNjM0NTllMy01MGNiLTQ3NTEtYjA0OS05YTg0Nzg0NWRjNzgiLCJ4cy51c2VyLmF0dHJpYnV0ZXMiOnsiQmFua05hbWUiOlsiQmFuayBBIl0sIkNvdW50cnkiOlsiRlJBIiwiR0JSIiwiSlBOIiwiVVNBIl19LCJ1c2VyX25hbWUiOiJkZWJheWFuLmJhbmVyamVlMUBpYm0uY29tIiwib3JpZ2luIjoic2FwLmRlZmF1bHQiLCJpc3MiOiJodHRwczovL2Y0NjQ3YWU2dHJpYWwuYXV0aGVudGljYXRpb24udXMxMC5oYW5hLm9uZGVtYW5kLmNvbS9vYXV0aC90b2tlbiIsInhzLnN5c3RlbS5hdHRyaWJ1dGVzIjp7InhzLnJvbGVjb2xsZWN0aW9ucyI6WyJTQVAgSEFOQSBDbG91ZCBWaWV3ZXIiLCJTQVAgSEFOQSBDbG91ZCBBZG1pbmlzdHJhdG9yIiwiUkNfTVlDQVBBUFAiLCJTdWJhY2NvdW50IEFkbWluaXN0cmF0b3IiXX0sImdpdmVuX25hbWUiOiJEZWJheWFuIiwiY2xpZW50X2lkIjoic2ItbXlDYXBBcHAtZjQ2NDdhZTZ0cmlhbC1kZXYhdDY1ODg5MiIsImF1ZCI6WyJvcGVuaWQiLCJzYi1teUNhcEFwcC1mNDY0N2FlNnRyaWFsLWRldiF0NjU4ODkyIiwibXlDYXBBcHAtZjQ2NDdhZTZ0cmlhbC1kZXYhdDY1ODg5MiJdLCJleHRfYXR0ciI6eyJlbmhhbmNlciI6IlhTVUFBIiwic3ViYWNjb3VudGlkIjoiMTg0MWQzNWYtYTAwZS00MWEzLThjZGItMjNkMDllNjdiMDU3IiwiemRuIjoiZjQ2NDdhZTZ0cmlhbCJ9LCJ1c2VyX3V1aWQiOiI5OWZkNTQ2MS02OWVhLTQzNWMtOTMwMy1iYTM2ZDk2NTZmZDciLCJ6aWQiOiIxODQxZDM1Zi1hMDBlLTQxYTMtOGNkYi0yM2QwOWU2N2IwNTciLCJncmFudF90eXBlIjoicGFzc3dvcmQiLCJ1c2VyX2lkIjoiMDYzNDU5ZTMtNTBjYi00NzUxLWIwNDktOWE4NDc4NDVkYzc4IiwiYXpwIjoic2ItbXlDYXBBcHAtZjQ2NDdhZTZ0cmlhbC1kZXYhdDY1ODg5MiIsInNjb3BlIjpbIm9wZW5pZCIsIm15Q2FwQXBwLWY0NjQ3YWU2dHJpYWwtZGV2IXQ2NTg4OTIuRGlzcGxheSJdLCJhdXRoX3RpbWUiOjE3ODQ3MTAyODksImV4cCI6MTc4NDcxMTE4OSwiZmFtaWx5X25hbWUiOiJCYW5lcmplZSIsImlhdCI6MTc4NDcxMDI4OSwianRpIjoiOTBhNDUwM2U4ZjEzNDBhM2ExNThkY2JkNzk2YWVmZTgiLCJlbWFpbCI6ImRlYmF5YW4uYmFuZXJqZWUxQGlibS5jb20iLCJyZXZfc2lnIjoiNmZmZjMzZTIiLCJjaWQiOiJzYi1teUNhcEFwcC1mNDY0N2FlNnRyaWFsLWRldiF0NjU4ODkyIn0.SSL_RBLpgUWPN6SCortkLuSMBQmv-WU3VoGoWPXh3WZNaFzK6fgrhRHp8mLwTpYMt0SP1_rQcylfx7YCzn6fBh13-2mn0inOX0bKBX0UC4dQiKSdxLYSQRkLQF1H83th1wkaIG1UalPRM2y-e8D-vS5Xx7NOR5piveDDGPm2-5dJdvXoOH4SHRCGtaEaxVB8B9EojHp4RcuEKB5_j4MEFytRoy6sz9n1J25-hyJmQZjYxTLrQmuyfEZjcBd9hlGfPDtn59YFuol6rk0niFrmxht6V2xQsrhD_63O28Ts3zlMy_osqPWK2RtJuIPPV-4Fk780D0q0eDzKGsPFRJCANw
+
+###Get Address Data with Restriction - Mock User
+http://localhost:4004/odata/v4/CatalogService/AddressSet
+Authorization: Basic ananya:
+
+###Get Count of Employees - $count
+http://localhost:4004/odata/v4/CatalogService/EmployeeSet/$count
+
+###Get Employee Data with $top and $skip
+http://localhost:4004/odata/v4/CatalogService/EmployeeSet?$top=5&$skip=5
+
+###Get Employee Data with $select
+http://localhost:4004/odata/v4/CatalogService/EmployeeSet?$select=nameFirst,email
+
+###Get Employee Data with $filter
+http://localhost:4004/odata/v4/CatalogService/EmployeeSet?$filter=nameFirst eq 'John4'
+
+###Call to load single employee data
+http://localhost:4004/odata/v4/CatalogService/EmployeeSet/b0211872-ac5b-4a06-9b74-d9a8b1978201
+
+###POST -Create New Employee
+POST http://localhost:4004/odata/v4/CatalogService/EmployeeSet
+Content-Type: application/json
+
+{
+  "nameFirst": "John4",
+  "nameMiddle": "K",
+  "nameLast": "Kennedy3",
+  "nameInitials": "JKK",
+  "sex": "M",
+  "language": "E",
+  "phoneNumber": "9876543210",
+  "email": "user@example.com",
+  "CURRENCY": "INR",
+  "salaryAmount": 100000,
+  "accountNumber": "5000020005",
+  "bankId": "BOB",
+  "bankName": "Bank of Baroda"
+}
+
+###POST -Create New Employee with Mock User authorization
+POST http://localhost:4004/odata/v4/CatalogService/EmployeeSet
+Authorization: Basic ananya:
+Content-Type: application/json
+
+{
+  "nameFirst": "John4",
+  "nameMiddle": "K",
+  "nameLast": "Kennedy3",
+  "nameInitials": "JKK",
+  "sex": "M",
+  "language": "E",
+  "phoneNumber": "9876543210",
+  "email": "user@example.com",
+  "CURRENCY": "INR",
+  "salaryAmount": 100000,
+  "accountNumber": "5000020005",
+  "bankId": "BOB",
+  "bankName": "Bank A"
+}
+
+####PATCH - Update Employee Data
+PATCH http://localhost:4004/odata/v4/CatalogService/EmployeeSet/32bbf828-28d8-4228-9b8e-d4aab489b814
+Authorization: Basic ananya:
+Content-Type: application/json
+
+{
+  "salaryAmount": 900000,
+  "CURRENCY": "EUR"
+}
+
+
+###Get Product Data
+http://localhost:4004/odata/v4/CatalogService/ProductSet
+
+###Get single Product Data
+http://localhost:4004/odata/v4/CatalogService/ProductSet/PROD0000000000000000000000000010
+
+###Get Product Data with order data
+http://localhost:4004/odata/v4/CatalogService/ProductSet/PROD0000000000000000000000000010?$expand=To_Items
+
+###GET -all Purchase Order Data
+http://localhost:4004/odata/v4/CatalogService/PurchaseOrderSet
+
+###GET -single Purchase Order Data
+http://localhost:4004/odata/v4/CatalogService/PurchaseOrderSet/PO000000000000000000000000000001?$expand=Items
+
+###POST - Create New Purchase Order with Items
+POST http://localhost:4004/odata/v4/CatalogService/PurchaseOrderSet
+Content-Type: application/json
+
+{
+  "CURRENCY_code": "USD",
+  "GROSS_AMOUNT": 500,
+  "NET_AMOUNT": 500,
+  "TAX_AMOUNT": 50,
+  "NODE_KEY": "PO000000000000000000000000000011",
+  "PO_ID": "PO-9001",
+  "PARTNER_GUID_NODE_KEY": "BP000000000000000000000000000001",
+  "LIFECYCLE_STATUS": "N",
+  "OVERALL_STATUS": "P",
+  "Items": [
+    {
+      "CURRENCY_code": "USD",
+      "GROSS_AMOUNT": 250,
+      "NET_AMOUNT": 250,
+      "TAX_AMOUNT": 20,
+      "NODE_KEY": "POI00000000000000000000000000021",
+      "PARENT_KEY_NODE_KEY": "PO000000000000000000000000000011",
+      "PO_ITEM_POS": 10,
+      "PRODUCT_GUID_NODE_KEY": "PROD0000000000000000000000000001"
+    },
+    {
+      "CURRENCY_code": "USD",
+      "GROSS_AMOUNT": 250,
+      "NET_AMOUNT": 250,
+      "TAX_AMOUNT": 20,
+      "NODE_KEY": "POI00000000000000000000000000022",
+      "PARENT_KEY_NODE_KEY": "PO000000000000000000000000000011",
+      "PO_ITEM_POS": 20,
+      "PRODUCT_GUID_NODE_KEY": "PROD0000000000000000000000000003"
+    }
+  ]
+}
+
+###GET - Get Purchase Order Items with Supplier and Product Data
+http://localhost:4004/odata/v4/CatalogService/PurchaseOrderSet/PO000000000000000000000000000011?$expand=Items
+
+
+###Calling function -- Non Instance Bound Function
+http://localhost:4004/odata/v4/CatalogService/getMostExpensiveOrder
+
+###Calling action -- Instance Bound Action
+POST http://localhost:4004/odata/v4/CatalogService/PurchaseOrderSet/PO000000000000000000000000000001/boost
+Content-Type: application/json
+
+###GET Custom Entity data
+http://localhost:4004/odata/v4/my/EmployeeSet

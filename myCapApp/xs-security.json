@@ -1,0 +1,82 @@
+{
+  "xsappname": "myCapApp",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.Display",
+      "description": "display"
+    },
+    {
+      "name": "$XSAPPNAME.Edit",
+      "description": "edit"
+    },
+    {
+      "name": "$XSAPPNAME.boost",
+      "description": "boost"
+    },
+    {
+      "name": "$XSAPPNAME.Viewer",
+      "description": "Viewer"
+    },
+    {
+      "name": "$XSAPPNAME.Editor",
+      "description": "Editor"
+    },
+    {
+      "name": "$XSAPPNAME.Delete",
+      "description": "Delete records"
+    }
+  ],
+  "attributes": [
+    {
+      "name": "Country",
+      "description": "Country",
+      "valueType": "string"
+    },
+    {
+      "name": "BankName",
+      "description": "Bank Name of Employee",
+      "valueType": "string"
+    }
+  ],
+  "role-templates": [
+    {
+      "name": "Viewer",
+      "description": "Access read-only data",
+      "default-role-name": "Viewer: Authorized to Read All Books",
+      "scope-references": [
+        "$XSAPPNAME.Display"
+      ],
+      "attribute-references": [
+        {
+          "name": "Country",
+          "default-values": [
+            "USA"
+          ]
+        },
+        {
+          "name": "BankName",
+          "default-values": []
+        }
+      ]
+    },
+    {
+      "name": "Editor",
+      "description": "Edit and Boost",
+      "scope-references": [
+        "$XSAPPNAME.Editor",
+        "$XSAPPNAME.Edit",
+        "$XSAPPNAME.Delete"
+      ]
+    }
+  ],
+  "authorities": [
+    "$ACCEPT_GRANTED_AUTHORITIES"
+  ],
+  "oauth2-configuration": {
+    "token-validity": 900,
+    "redirect-uris": [
+      "https://*.cfapps.us10-001.hana.ondemand.com/login/callback"
+    ]
+  },
+  "xsenableasyncservice": "true"
+}

@@ -1,0 +1,75 @@
+{
+  "name": "myCapApp",
+  "version": "1.0.0",
+  "dependencies": {
+    "@cap-js/hana": "^2",
+    "@sap/cds": "10.0.4",
+    "@sap/xssec": "^4"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^2.4",
+    "@sap/cds-dk": "10.0.4",
+    "cds-plugin-ui5": "0.13.6"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "watch-managepo": "cds watch --open mycapapp.po.managepo/index.html?sap-ui-xx-viewCache=false --livereload false"
+  },
+  "private": true,
+  "cds": {
+    "requires": {
+      "auth": {
+        "[production]": {
+          "strategy": "JWT"
+        },
+        "[development]": {
+          "strategy": "mocked",
+          "users": {
+            "debayan": {
+              "roles": [
+                "Viewer",
+                "Editor"
+              ],
+              "userAttributes": {
+                "Country": "USA",
+                "BankName": [
+                  "Bank H"
+                ]
+              }
+            },
+            "ananya": {
+              "roles": [
+                "Editor",
+                "Viewer"
+              ],
+              "userAttributes": {
+                "Country": [
+                  "USA",
+                  "JPN",
+                  "GBR"
+                ],
+                "BankName": [
+                  "Bank A"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "[hybrid]": {
+        "db": "hana"
+      },
+      "[production]": {
+        "auth": {
+          "kind": "xsuaa"
+        }
+      }
+    }
+  },
+  "workspaces": [
+    "app/*"
+  ],
+  "sapux": [
+    "app/managepo"
+  ]
+}
