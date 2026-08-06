@@ -1,0 +1,20 @@
+{
+    "exportTime": "2026-08-06 13:18:41.63969566",
+    "destination": {
+        "Name": "MyCapAppDest",
+        "Type": "HTTP",
+        "Description": "Destination to Connect Server",
+        "URL": "https://f4647ae6trial-dev-mycapapp-srv.cfapps.us10-001.hana.ondemand.com/",
+        "ProxyType": "Internet",
+        "Authentication": "OAuth2UserTokenExchange",
+        "clientId": "sb-myCapApp-f4647ae6trial-dev!t658892",
+        "clientSecret": "<removed>",
+        "tokenServiceURL": "https://f4647ae6trial.authentication.us10.hana.ondemand.com/oauth/token",
+        "tokenServiceURLType": "Dedicated",
+        "HTML5.DynamicDestination": "true",
+        "WebIDEEnabled": "true",
+        "WebIDEUsage": "odata_gen",
+        "HTML5.Timeout": "60000",
+        "scope": "myCapApp-f4647ae6trial-dev!t658892.Editor"
+    }
+}
